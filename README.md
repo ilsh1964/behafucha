@@ -8,11 +8,14 @@ Authors: Ilan Shavit, ilan.shavit@gmail.com, http://ilsh.info
 1. Behafucha: Converts English/Hebrew to Hebrew/English text (like "Hafuch Al Hafuch")
 
 2. Install:
-     sudo apt-get install behafucha_0.7.deb
+     sudo dpkg -i behafucha_0.7.deb
 
 3. Usage:
    a. Mark the text
    b. Run 'Behafucha' (Application->Accessories->Behafucha)
+   
+   Remark: You can define a keyboard shortcut to Behafucha (like: ALT+B)
+   then after marking the text press the keyboard shortcut
 
 4. Licence: 
    This program is free software; you can redistribute it and/or modify
