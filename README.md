@@ -13,7 +13,7 @@
      sudo dpkg -i behafucha_0.7.deb
 
 ### Usage:
-   a. Mark the text
+   a. Mark the text <br>
    b. Run 'Behafucha' (Application->Accessories->Behafucha)
    
 ### Remark: 
