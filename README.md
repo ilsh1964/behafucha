@@ -1,7 +1,7 @@
 # Behafucha - Ver 0.7 
 
 ## Authors:
-   Ilan Shavit, ilan.shavit@gmail.com, http://ilsh.info
+   Ilan Shavit, ilan.shavit@gmail.com, http://ilsh.info <BR>
    Moshe Wagner, moshe.wagner@gmail.com, http://dosilinux.wordpress.com
 
 
