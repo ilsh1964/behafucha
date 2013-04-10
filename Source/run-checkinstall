@@ -1,0 +1,9 @@
+#!/bin/bash
+checkinstall --requires 'xsel,xvkbd' --pkgversion 0.7 --pkgname behafucha --maintainer 'ilan.shavit@gmail.com' --pkgarch all make install <<EOF
+7
+all
+
+EOF
+
+
+

@@ -1,0 +1,14 @@
+[Desktop Entry]
+Version=1.0
+Encoding=UTF-8
+Name=Behafucha
+Name[he]=בהפוכה
+Type=Application
+Terminal=false
+GenericName=
+Comment=Fix wrong typing: Hebrew <-> English
+Comment[he]=מתקן הקלדה שגויה: עברית <-> אנגלית 
+Icon=/usr/share/pixmaps/behafucha.png
+Exec=/usr/bin/behafucha
+Categories=Application;
+Categories=GNOME;GTK;Utility;

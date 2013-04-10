@@ -1,0 +1,4 @@
+#!/bin/bash
+
+python /usr/lib/Behafucha/Behafucha.py
+

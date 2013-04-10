@@ -1,4 +1,4 @@
-Behafucha - Ver 0.7 
+Behafucha - Ver 0.6  
 
 Authors: Ilan Shavit, ilan.shavit@gmail.com, http://ilsh.info
          Moshe Wagner, moshe.wagner@gmail.com, http://dosilinux.wordpress.com
@@ -8,7 +8,7 @@ Authors: Ilan Shavit, ilan.shavit@gmail.com, http://ilsh.info
 1. Behafucha: Converts English/Hebrew to Hebrew/English text (like "Hafuch Al Hafuch")
 
 2. Install:
-     sudo apt-get install behafucha_0.7.deb
+     sudo apt-get install behafucha_0.6-1_all.deb
 
 3. Usage:
    a. Mark the text
