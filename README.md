@@ -2,6 +2,7 @@
 
 ## Authors:
    Ilan Shavit, ilan.shavit@gmail.com, http://ilsh.info <BR>
+   Meir Kriheli <meir@mksoft.co.il>, http://mksoft.co.il <BR>
    Moshe Wagner, moshe.wagner@gmail.com, http://dosilinux.wordpress.com
 
 
