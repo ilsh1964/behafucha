@@ -11,7 +11,7 @@
    Converts English/Hebrew to Hebrew/English text (like "Hafuch Al Hafuch")
 
 ### Install:
-     sudo dpkg -i behafucha_0.7.deb
+     sudo dpkg -i behafucha_0.8.deb
 
 ### Usage:
    a. Mark the text <br>
