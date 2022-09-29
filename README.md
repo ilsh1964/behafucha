@@ -1,4 +1,4 @@
-# Behafucha - Ver 0.7 
+# Behafucha - Ver 0.8 - For Python 3 
 
 ## Authors:
    Ilan Shavit, ilan.shavit@gmail.com, http://ilsh.info <BR>
