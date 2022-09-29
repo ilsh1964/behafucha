@@ -2,7 +2,7 @@
 # -*- coding: UTF-8 -*-
 
 """
-__version__ = "$Revision: 0.7 $"
+__version__ = "$Revision: 0.8 $"
 __date__ = "$Date: כ"ה אלול  $"
 
 
@@ -22,14 +22,16 @@ __date__ = "$Date: כ"ה אלול  $"
 * Authors: Ilan Shavit <ilan.shavit@gmail.com> http://ilsh.info
 *          Moshe Wagner <moshe.wagner@gmail.com>, http://dosilinux.wordpress.com
 *          Meir Kriheli <meir@mksoft.co.il>, http://mksoft.co.il
+*          Amiad Bareli <b@hatul.info>, https://hatul.info
 """
 
 import subprocess, time, optparse
+from itertools import chain
 
 ENG = """w/qtcdsvuzjyhlfkonibxg;p.mera,'"""
-HEB = """'./אבגדהוזחטיךכלםמןנסעףפץצקרשת,""".decode('utf-8')
+HEB = """'./אבגדהוזחטיךכלםמןנסעףפץצקרשת,"""
 
-ENG_RANGE = range(65,90)+range(97,122) # English letters
+ENG_RANGE = chain(range(65,90), range(97,122)) # English letters
 HEB_RANGE = range(1488,1514)           # Hebrew letters  
 
 def get_selection():
@@ -107,7 +109,7 @@ if __name__ == '__main__':
     sel_translated = translate(sel, title_case=opts.title)
 
     if opts.stdout:
-        print sel_translated
+        print(sel_translated)
     else:
         set_selection(sel_translated)
         if opts.paste:
