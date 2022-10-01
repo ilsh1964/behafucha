@@ -1,8 +1,8 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 # -*- coding: UTF-8 -*-
 
 """
-__version__ = "$Revision: 0.8 $"
+__version__ = "$Revision: 0.9 $"
 __date__ = "$Date: כ"ה אלול  $"
 
 

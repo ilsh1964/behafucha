@@ -1,4 +1,4 @@
-# Behafucha - Ver 0.8 - For Python 3
+# Behafucha - Ver 0.9 - For Python 3
 Converts English/Hebrew to Hebrew/English text (like "Hafuch Al Hafuch")
 
 ## Authors
@@ -10,7 +10,7 @@ Converts English/Hebrew to Hebrew/English text (like "Hafuch Al Hafuch")
 
 ## Install
 ### Debian/Ubuntu
-`sudo dpkg -i behafucha_0.8.deb`
+`sudo apt install ./Behafucha_0.8.deb`
 ### Arch
 From AUR: https://aur.archlinux.org/packages/behafucha
 
@@ -21,7 +21,7 @@ From AUR: https://aur.archlinux.org/packages/behafucha
    b. Run 'Behafucha' (Application->Accessories->Behafucha)
    
 ## Remark: 
-   You can define a keyboard shortcut to Behafucha (like: ALT+B)
-   then after marking the text press the keyboard shortcut
+   - Behafucha works only on Xorg
+   - Define a keyboard shortcut for Behafucha, then mark the text and press shortcut
 
 

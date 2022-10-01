@@ -1,0 +1,8 @@
+Package: Behafucha
+Version: 0.9
+Architecture: all
+Essential: no
+Priority: optional
+Depends: xvkbd, xsel
+Maintainer: Ilan Shavit
+Description: Behafucha - Converts English/Hebrew to Hebrew/English text
