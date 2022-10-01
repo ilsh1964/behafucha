@@ -1,4 +1,4 @@
 #!/bin/bash
 
-python3 /usr/lib/Behafucha/Behafucha.py
+python3 /usr/lib/behafucha/behafucha.py
 

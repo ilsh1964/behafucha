@@ -2,7 +2,7 @@
 # -*- coding: UTF-8 -*-
 
 """
-__version__ = "$Revision: 0.9 $"
+__version__ = "$Revision: 0.91 $"
 __date__ = "$Date: כ"ה אלול  $"
 
 
@@ -32,7 +32,7 @@ ENG = """w/qtcdsvuzjyhlfkonibxg;p.mera,'"""
 HEB = """'./אבגדהוזחטיךכלםמןנסעףפץצקרשת,"""
 
 ENG_RANGE = chain(range(65,90), range(97,122)) # English letters
-HEB_RANGE = range(1488,1514)           # Hebrew letters  
+HEB_RANGE = range(1488,1514)           # Hebrew letters
 
 def get_selection():
     """Get the current selection"""
@@ -69,7 +69,7 @@ def translate(content, table=None, title_case=False):
             table = dict(zip(map(ord, HEB+ENG), map(ord, ENG+HEB)))
         else:
             table = dict(zip(map(ord, ENG+HEB), map(ord, HEB+ENG)))
-    
+
     translated = content.lower().translate(table)
 
     if title_case:
@@ -82,13 +82,13 @@ def get_opts_parser():
 
     parser = optparse.OptionParser()
 
-    parser.add_option('-s', '--stdout', dest='stdout', 
+    parser.add_option('-s', '--stdout', dest='stdout',
             action="store_true", default=False,
             help='Send to stdout instead of clipboard (implies -n)')
-    parser.add_option('-n', '--no-paste', dest='paste', 
+    parser.add_option('-n', '--no-paste', dest='paste',
             default=True, action="store_false",
             help="Put in clipboard, don't send CTRL+V to the active window")
-    parser.add_option('-t', '--title-case', dest='title', 
+    parser.add_option('-t', '--title-case', dest='title',
             action="store_true", default=False,
             help='Words start with title case')
 
@@ -98,7 +98,7 @@ def send_paste():
     """Send CTRL+V combo to the window"""
 
     subprocess.call(r"xvkbd -text '\Cv'" ,shell=True)
-            
+
 
 if __name__ == '__main__':
 
