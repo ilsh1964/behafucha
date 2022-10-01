@@ -1,4 +1,4 @@
-# Behafucha - Ver 0.9 - For Python 3
+# Behafucha - Ver 0.91 - For Python 3
 Converts English/Hebrew to Hebrew/English text
 
 ## Authors
@@ -10,7 +10,7 @@ Converts English/Hebrew to Hebrew/English text
 
 ## Install
 ### Debian/Ubuntu
-`sudo apt install ./Behafucha_0.9.deb`
+`sudo apt install ./Behafucha_0.91.deb`
 
 ## Usage:
    - Mark the text
