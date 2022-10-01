@@ -12,10 +12,6 @@ Converts English/Hebrew to Hebrew/English text
 ### Debian/Ubuntu
 `sudo apt install ./Behafucha_0.9.deb`
 
-### Arch
-From AUR: https://aur.archlinux.org/packages/behafucha
-`yay -S behafucha`
-
 ## Usage:
    - Mark the text
    - Run the keyboard shortcut (read the Remark)
