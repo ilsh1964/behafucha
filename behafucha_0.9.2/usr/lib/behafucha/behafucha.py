@@ -2,8 +2,8 @@
 # -*- coding: UTF-8 -*-
 
 """
-__version__ = "$Revision: 0.91 $"
-__date__ = "$Date: כ"ה אלול  $"
+__version__ = "$Revision: 0.9.2 $"
+__date__ = "$Date: ז  תשרי  $"
 
 
 * This program is free software; you can redistribute it and/or modify
