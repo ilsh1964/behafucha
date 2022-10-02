@@ -10,7 +10,7 @@ Converts English/Hebrew to Hebrew/English text
 
 ## Install
 ### Debian/Ubuntu
-`sudo apt install ./Behafucha_0.91.deb`
+`sudo apt install ./Behafucha_0.9.2.deb`
 
 ## Usage:
    - Mark the text
