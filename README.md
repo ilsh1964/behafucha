@@ -1,4 +1,4 @@
-# Behafucha - Ver 0.9.2 - For Python 3
+# Behafucha - Ver 0.9.3 - For Python 3
 Converts English/Hebrew to Hebrew/English text
 
 ## Authors
@@ -10,12 +10,13 @@ Converts English/Hebrew to Hebrew/English text
 
 ## Install
 ### Debian/Ubuntu
-`sudo apt install ./Behafucha_0.9.2.deb`
+`sudo dpkg -i ./Behafucha_0.9.3.deb`
+`sudo apt install -f`
 
 ### Arch (AUR)
  - https://aur.archlinux.org/packages/behafucha
 
-### Non Debian\Ubuntu\Arch
+### Other distributions:
  - install.tar.gz include a script to install behafucha on non Debian\Ubuntu OS
 
 ## Usage:
@@ -23,7 +24,7 @@ Converts English/Hebrew to Hebrew/English text
    - Run the keyboard shortcut (read the Remark)
 
 ## Remark:
-   - Behafucha works only on Xorg
+   - Behafucha works only on Xorg (xvkbd limitation)
    - Define a keyboard shortcut for Behafucha, then mark the text and press the shortcut
 
 

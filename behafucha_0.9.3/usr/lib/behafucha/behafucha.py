@@ -1,9 +1,9 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 # -*- coding: UTF-8 -*-
 
 """
-__version__ = "$Revision: 0.9.2 $"
-__date__ = "$Date: ז  תשרי  $"
+__version__ = "$Revision: 0.9.3 $"
+__date__ = "$Date: טו  תשרי  $"
 
 
 * This program is free software; you can redistribute it and/or modify
@@ -25,27 +25,30 @@ __date__ = "$Date: ז  תשרי  $"
 *          Amiad Bareli <b@hatul.info>, https://hatul.info
 """
 
-import subprocess, time, optparse
+import subprocess
+import time
 from itertools import chain
 
 ENG = """w/qtcdsvuzjyhlfkonibxg;p.mera,'"""
 HEB = """'./אבגדהוזחטיךכלםמןנסעףפץצקרשת,"""
 
-ENG_RANGE = chain(range(65,90), range(97,122)) # English letters
-HEB_RANGE = range(1488,1514)           # Hebrew letters
+ENG_RANGE = chain(range(65, 90), range(97, 122)) # English letters
+HEB_RANGE = range(1488, 1514)           # Hebrew letters
 
 def get_selection():
     """Get the current selection"""
 
     time.sleep(0.3)
-    proc = subprocess.Popen('xsel',shell=True, stdout=subprocess.PIPE)
+    proc = subprocess.Popen('xsel', shell=True, stdout=subprocess.PIPE)
     return proc.communicate()[0].decode('utf-8')
+
 
 def set_selection(content):
     """Put content in clipboard"""
 
-    proc = subprocess.Popen('xsel -b -i',shell=True, stdin=subprocess.PIPE)
+    proc = subprocess.Popen('xsel -b -i', shell=True, stdin=subprocess.PIPE)
     proc.communicate(content.encode('utf-8'))
+
 
 def translate(content, table=None, title_case=False):
     """Translates with optional translation table"""
@@ -57,11 +60,11 @@ def translate(content, table=None, title_case=False):
 
         # look for 1st english or hebrew
         first_eng = False
-        for c in content:
-            if ord(c) in ENG_RANGE:
+        for each_char in content:
+            if ord(each_char) in ENG_RANGE:
                 first_eng = True
                 break
-            elif ord(c) in HEB_RANGE:
+            if ord(each_char) in HEB_RANGE:
                 break
 
         # compose the table depending on first english charr
@@ -77,40 +80,15 @@ def translate(content, table=None, title_case=False):
 
     return translated
 
-def get_opts_parser():
-    """Creates command line options parser"""
-
-    parser = optparse.OptionParser()
-
-    parser.add_option('-s', '--stdout', dest='stdout',
-            action="store_true", default=False,
-            help='Send to stdout instead of clipboard (implies -n)')
-    parser.add_option('-n', '--no-paste', dest='paste',
-            default=True, action="store_false",
-            help="Put in clipboard, don't send CTRL+V to the active window")
-    parser.add_option('-t', '--title-case', dest='title',
-            action="store_true", default=False,
-            help='Words start with title case')
-
-    return parser
 
 def send_paste():
     """Send CTRL+V combo to the window"""
 
-    subprocess.call(r"xvkbd -text '\Cv'" ,shell=True)
+    subprocess.call(r"xvkbd -text '\Cv'", shell=True)
 
 
 if __name__ == '__main__':
-
-    parser = get_opts_parser()
-    opts, rest = parser.parse_args()
-
-    sel = get_selection()
-    sel_translated = translate(sel, title_case=opts.title)
-
-    if opts.stdout:
-        print(sel_translated)
-    else:
-        set_selection(sel_translated)
-        if opts.paste:
-            send_paste()
+    SELECTION = get_selection()
+    SEL_TRANSLATED = translate(SELECTION)
+    set_selection(SEL_TRANSLATED)
+    send_paste()
