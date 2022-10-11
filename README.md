@@ -37,9 +37,7 @@ keyboard for X and Wayland display server). You need to install version 1.0:
 ### Other distributions:
  - install.tar.gz include a script to install behafucha on non Debian\Ubuntu OS
 
-### Remark:
-### Creating a new version of deb file (from git):
-Prerequisites:
+### Creating a new version of DEB file (from git):
 * sudo apt install cmake scdoc pkg-config checkinstall git
 * git clone  https://github.com/ReimuNotMoe/ydotool
 * cd ydotool
@@ -48,5 +46,5 @@ Prerequisites:
 * make -j `nproc`
 * sudo checkinstall --install=no
 * sudo apt install ./ydotool*.deb
-Follow Debian\Ubuntu section for next instruction
+* Follow Debian\Ubuntu section for the following steps
 
