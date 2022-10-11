@@ -12,7 +12,7 @@ Converts English/Hebrew to Hebrew/English text
 ### Debian/Ubuntu
 Debian and ubuntu repositories have a very old version of ydotool (virtual
 keyboard for X and Wayland display server). You need to install version 1.0:
-* sudo dpkg -i ./ydotool-custom_1.0-1_amd64.deb
+* sudo dpkg -i ./ydotool_1.0-1_amd64.deb
 * sudo dpkg -i ./behafucha_0.9.4.deb
 * sudo apt install -f
 
@@ -22,16 +22,31 @@ keyboard for X and Wayland display server). You need to install version 1.0:
 #### Install systemd service
 * sudo ln -s /usr/lib/systemd/user/ydotool.service /etc/systemd/system/
 * sudo systemctl daemon-reload
-* sudo service ydotool start
+* sudo systemctl start ydotool
+* sudo systemctl enable ydotool
+* sudo systemctl status ydotool
 
 ### Arch (AUR)
  - https://aur.archlinux.org/packages/behafucha
-
-### Other distributions:
- - install.tar.gz include a script to install behafucha on non Debian\Ubuntu OS
 
 ## Usage:
    - Define a keyboard shortcut that run /usr/bin/behafucha
    - Mark the text
    - Run the keyboard shortcut
+
+### Other distributions:
+ - install.tar.gz include a script to install behafucha on non Debian\Ubuntu OS
+
+### Remark:
+### Creating a new version of deb file (from git):
+Prerequisites:
+* sudo apt install cmake scdoc pkg-config checkinstall git
+* git clone  https://github.com/ReimuNotMoe/ydotool
+* cd ydotool
+* mkdir build && cd build
+* cmake ..
+* make -j `nproc`
+* sudo checkinstall --install=no
+* sudo apt install ./ydotool*.deb
+Follow Debian\Ubuntu section for next instruction
 
