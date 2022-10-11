@@ -3,7 +3,7 @@
 
 """
 __version__ = "$Revision: 0.9.3 $"
-__date__ = "$Date: טו  תשרי  $"
+__date__ = "$Date: טז  תשרי  $"
 
 
 * This program is free software; you can redistribute it and/or modify
@@ -39,15 +39,18 @@ def get_selection():
     """Get the current selection"""
 
     time.sleep(0.3)
-    proc = subprocess.Popen('xsel', shell=True, stdout=subprocess.PIPE)
-    return proc.communicate()[0].decode('utf-8')
+    #proc = subprocess.Popen('xsel', shell=True, stdout=subprocess.PIPE)
+    #return proc.communicate()[0].decode('utf-8')
+    with subprocess.Popen('xsel', shell=True, stdout=subprocess.PIPE) as proc:
+        return proc.communicate()[0].decode('utf-8')
 
 
 def set_selection(content):
     """Put content in clipboard"""
 
-    proc = subprocess.Popen('xsel -b -i', shell=True, stdin=subprocess.PIPE)
-    proc.communicate(content.encode('utf-8'))
+    with subprocess.Popen('xsel -b -i', shell=True, stdin=subprocess.PIPE) as \
+    proc:
+        proc.communicate(content.encode('utf-8'))
 
 
 def translate(content, table=None, title_case=False):
@@ -84,7 +87,8 @@ def translate(content, table=None, title_case=False):
 def send_paste():
     """Send CTRL+V combo to the window"""
 
-    subprocess.call(r"xvkbd -text '\Cv'", shell=True)
+    #subprocess.call(r"xvkbd -text '\Cv'", shell=True)
+    subprocess.call(r"/usr/lib/behafucha/ctrl_v", shell=True)
 
 
 if __name__ == '__main__':
