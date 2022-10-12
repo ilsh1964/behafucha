@@ -1,4 +1,4 @@
-# Behafucha - Ver 0.9.4 - For Python 3 and Wayland support
+# Behafucha - Ver 0.9.4 (support Python3, Xorg and Wayland)
 Converts English/Hebrew to Hebrew/English text
 
 ## Authors
@@ -6,7 +6,6 @@ Converts English/Hebrew to Hebrew/English text
 * Meir Kriheli
 * Moshe Wagner
 * Amiad Bareli
-
 
 ## Install
 ### Debian/Ubuntu
@@ -16,7 +15,7 @@ keyboard for X and Wayland display server). You need to install version 1.0:
 * sudo dpkg -i ./behafucha_0.9.4.deb
 * sudo apt install -f
 
-#### Set the suid bit so ydotool can be run by any user:
+#### Set suid bit so any user can run ydotool with root permission:
 * sudo chmod +s /usr/local/bin/ydotool
 
 #### Install systemd service
@@ -29,15 +28,16 @@ keyboard for X and Wayland display server). You need to install version 1.0:
 ### Arch (AUR)
  - https://aur.archlinux.org/packages/behafucha
 
+### Fedora 36, 37:
+ - extract install.tar.gz
+ - run install.sh
+
 ## Usage:
    - Define a keyboard shortcut that run /usr/bin/behafucha
    - Mark the text
    - Run the keyboard shortcut
 
-### Other distributions:
- - install.tar.gz include a script to install behafucha on non Debian\Ubuntu OS
-
-### Creating a new version of DEB file (from git):
+## Archive: Create (from git) a new ydotool deb package:
 * sudo apt install cmake scdoc pkg-config checkinstall git
 * git clone  https://github.com/ReimuNotMoe/ydotool
 * cd ydotool
