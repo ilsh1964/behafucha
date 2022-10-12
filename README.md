@@ -1,4 +1,4 @@
-# Behafucha - Ver 0.9.4 (support Python3, Xorg and Wayland)
+# Behafucha - Ver 0.9.5 (support Python3, Xorg and Wayland)
 Converts English/Hebrew to Hebrew/English text
 
 ## Authors
@@ -9,28 +9,20 @@ Converts English/Hebrew to Hebrew/English text
 
 ## Install
 ### Debian/Ubuntu
-Debian and ubuntu repositories have a very old version of ydotool (virtual
-keyboard for X and Wayland display server). You need to install version 1.0:
-* sudo dpkg -i ./ydotool_1.0-1_amd64.deb
-* sudo dpkg -i ./behafucha_0.9.4.deb
-* sudo apt install -f
+Behafucha depends on ydotool version 1.0 (a virtual keyboard that works on Xorg and Wayland display servers).
+Debian\Ubuntu has a very old version of ydotool (0.18), so you need to install it manually: 
 
-#### Set suid bit so any user can run ydotool with root permission:
+* sudo dpkg -i ./ydotool_1.0-1_amd64.deb
+* sudo dpkg -i ./behafucha_0.9.5.deb
 * sudo chmod +s /usr/local/bin/ydotool
 
-#### Install systemd service
-* sudo ln -s /usr/lib/systemd/user/ydotool.service /etc/systemd/system/
-* sudo systemctl daemon-reload
-* sudo systemctl start ydotool
-* sudo systemctl enable ydotool
-* sudo systemctl status ydotool
-
-### Arch (AUR)
+### Arch (AUR) - not updated version
  - https://aur.archlinux.org/packages/behafucha
 
 ### Fedora 36, 37:
- - extract install.tar.gz
- - run install.sh
+ - tar -xzf fedora_install.tar.gz
+ - cd fedora_install 
+ - ./install.sh
 
 ## Usage:
    - Define a keyboard shortcut that run /usr/bin/behafucha
