@@ -1,4 +1,4 @@
-# Behafucha - Ver 0.9.5 (support Python3, Xorg and Wayland)
+# Behafucha - Ver 0.9.6 (support Python3, Xorg and Wayland)
 Converts English/Hebrew to Hebrew/English text
 
 ## Authors
@@ -12,9 +12,12 @@ Converts English/Hebrew to Hebrew/English text
 Behafucha depends on ydotool version 1.0 (a virtual keyboard that works on Xorg and Wayland display servers).
 Debian\Ubuntu has a very old version of ydotool (0.18), so you need to install it manually: 
 
+* sudo apt install xsel
 * sudo dpkg -i ./ydotool_1.0-1_amd64.deb
-* sudo dpkg -i ./behafucha_0.9.5.deb
+* sudo dpkg -i ./behafucha_0.9.6.deb
 * sudo chmod +s /usr/local/bin/ydotool
+* sudo systemctl start ydotool
+* sudo systemctl enable ydotool
 
 ### Arch (AUR) - not updated version
  - https://aur.archlinux.org/packages/behafucha
